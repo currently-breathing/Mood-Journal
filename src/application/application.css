@@ -1,0 +1,25 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.main_body {
+	-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #94bbe9, #b8aeee);
+
+}
+
+.buttons {
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.buttons:hover {
+	-fx-cursor: hand;
+	-fx-effect: innershadow( gaussian, rgba( 0, 0, 0, 0.5 ), 10, 0, 5, 5 );
+}
+
+.list_view {
+	-fx-font-size: 1.5em;
+	
+}
+
+.text_box {
+	-fx-font-size: 1.5em;
+	
+}

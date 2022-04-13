@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="main_page" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="662.0" styleClass="main_body" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainMenuController">
+   <children>
+      <Button fx:id="new_entry_button" layoutX="110.0" layoutY="144.0" mnemonicParsing="false" onAction="#newEntry" prefHeight="59.0" prefWidth="113.0" style="-fx-background-color: lightblue; -fx-border-color: none; -fx-background-radius: 7;" styleClass="buttons" text="New Entry">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="old_entry_button" layoutX="110.0" layoutY="265.0" mnemonicParsing="false" onAction="#oldEntry" prefHeight="59.0" prefWidth="113.0" style="-fx-background-color: lightblue; -fx-border-color: none; -fx-background-radius: 7;" styleClass="buttons" text="Old Entry">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Label layoutX="355.0" layoutY="146.0" text="Year:">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="year_drop_down" layoutX="412.0" layoutY="145.0" prefWidth="150.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="85.0" prefWidth="662.0" style="-fx-background-color: orange;" text="Journal">
+         <font>
+            <Font size="71.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

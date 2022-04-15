@@ -1,4 +1,4 @@
-package application;
+package controller;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -46,39 +46,40 @@ public class NewEntryController {
 
     public void initialize() throws Exception {
     	Date date = new Date();
-    	SimpleDateFormat formatDate = new SimpleDateFormat("MM/dd/yyyy");
+    	SimpleDateFormat formatDate = new SimpleDateFormat("MM-dd-yyyy");
     	date_field.setText(formatDate.format(date));
     }
     
 
     @FXML
     void cancelEntry(ActionEvent event) throws IOException {
-        main_page = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));// pane you are GOING TO
+        main_page = FXMLLoader.load(getClass().getResource("../view/MainMenu.fxml"));// pane you are GOING TO
         Scene scene = new Scene(main_page);// pane you are GOING TO show
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();// pane you are ON
-        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
         window.setScene(scene);
         window.show();
     }
 
     @FXML
     void saveEntry(ActionEvent event) throws IOException {
+    	//throw exceptions
     	if (journal_title.getText().equals("") || journal_content.getText().equals("")) {
     		Alert fail = new Alert(AlertType.WARNING);
     		fail.setContentText("Missing Title or Content");
     		fail.showAndWait();
     		return;
-    		
     	}
+    	// get journal entry data
     	String title = journal_title.getText();
     	String description = journal_content.getText();
     	String date = date_field.getText();
     	Color mood = mood_selector.getValue();
-    	JournalEntryModel.addItem(title, description, date, mood.toString());
-        main_page = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));// pane you are GOING TO
+    	
+    	// Save entry and return to main Page
+    	JournalEntryModel.addJournalEntry(title, description, date, mood.toString());
+        main_page = FXMLLoader.load(getClass().getResource("../view/MainMenu.fxml"));// pane you are GOING TO
         Scene scene = new Scene(main_page);// pane you are GOING TO show
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();// pane you are ON
-        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
         window.setScene(scene);
         window.show();
     }

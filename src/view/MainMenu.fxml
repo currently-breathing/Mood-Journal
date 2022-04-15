@@ -5,7 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="main_page" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="662.0" styleClass="main_body" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainMenuController">
+<AnchorPane fx:id="main_page" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="662.0" styleClass="main_body" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenuController">
    <children>
       <Button fx:id="new_entry_button" layoutX="110.0" layoutY="144.0" mnemonicParsing="false" onAction="#newEntry" prefHeight="59.0" prefWidth="113.0" style="-fx-background-color: lightblue; -fx-border-color: none; -fx-background-radius: 7;" styleClass="buttons" text="New Entry">
          <font>

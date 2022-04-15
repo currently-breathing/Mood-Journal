@@ -1,4 +1,4 @@
-package application;
+package controller;
 
 import java.io.IOException;
 
@@ -35,10 +35,9 @@ public class MainMenuController {
     
     @FXML
     void newEntry(ActionEvent event) throws IOException {
-        main_page = FXMLLoader.load(getClass().getResource("NewEntry.fxml"));// pane you are GOING TO
+        main_page = FXMLLoader.load(getClass().getResource("../view/NewEntry.fxml"));// pane you are GOING TO
         Scene scene = new Scene(main_page);// pane you are GOING TO show
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();// pane you are ON
-        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
         window.setScene(scene);
         window.show();
     }

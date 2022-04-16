@@ -1,3 +1,12 @@
+/**
+ * This is the main class that handles loading the main menu GUI page. 
+ * 
+ * @author Lydia Unterreiner (mdm824)
+ * 
+ * UTSA CS 3443 - Group 09 
+ * Spring 2022
+ */
+
 package application;
 	
 import javafx.application.Application;

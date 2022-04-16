@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -28,5 +29,6 @@
             <Font size="71.0" />
          </font>
       </Label>
+      <PieChart fx:id="journal_mood_chart" layoutX="344.0" layoutY="203.0" prefHeight="226.0" prefWidth="266.0" title="Mood Chart" />
    </children>
 </AnchorPane>

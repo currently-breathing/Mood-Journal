@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="main_page" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewJournalEntryController">
+   <children>
+      <Label prefHeight="53.0" prefWidth="700.0" style="-fx-background-color: #FED766;" text="Journal: New Entry" AnchorPane.leftAnchor="0.0">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </Label>
+      <TextArea fx:id="journal_content" layoutX="142.0" layoutY="142.0" prefHeight="241.0" prefWidth="420.0" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font></TextArea>
+      <Label fx:id="date_field" layoutX="25.0" layoutY="68.0" prefHeight="42.0" prefWidth="136.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="journal_title" alignment="CENTER" contentDisplay="CENTER" layoutX="139.0" layoutY="78.0" prefHeight="53.0" prefWidth="420.0" text="Journal Title" />
+      <Button fx:id="main_menu" layoutX="571.0" layoutY="7.0" mnemonicParsing="false" onAction="#returnToMainMenu" text="Main Menu" />
+      <Button fx:id="old_entries" layoutX="447.0" layoutY="7.0" mnemonicParsing="false" onAction="#returnToOldEntries" text="Old Entries" />
+   </children>
+</AnchorPane>

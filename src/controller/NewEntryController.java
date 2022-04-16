@@ -1,3 +1,13 @@
+/**
+ * This is controller class which handles the New Journal Entries GUI 
+ * and when a user writes and saves a new journal entry
+ * 
+ * @author Lydia Unterreiner (mdm824)
+ * 
+ * UTSA CS 3443 - Group 09 
+ * Spring 2022
+ */
+
 package controller;
 
 import java.io.IOException;
@@ -22,7 +32,7 @@ import javafx.stage.Stage;
 import model.JournalEntryModel;
 
 public class NewEntryController {
-
+	// class variables
     @FXML
     private Button cancel_button;
 
@@ -51,6 +61,10 @@ public class NewEntryController {
     }
     
 
+    /**
+     * @param event
+     * @throws IOException
+     */
     @FXML
     void cancelEntry(ActionEvent event) throws IOException {
         main_page = FXMLLoader.load(getClass().getResource("../view/MainMenu.fxml"));// pane you are GOING TO
@@ -60,6 +74,10 @@ public class NewEntryController {
         window.show();
     }
 
+    /**
+     * @param event
+     * @throws IOException
+     */
     @FXML
     void saveEntry(ActionEvent event) throws IOException {
     	//throw exceptions

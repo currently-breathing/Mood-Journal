@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="main_page" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewEntryController">
+   <children>
+      <Label prefHeight="53.0" prefWidth="700.0" style="-fx-background-color: #FED766;" text="Journal: New Entry" AnchorPane.leftAnchor="0.0">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </Label>
+      <TextArea fx:id="journal_content" layoutX="142.0" layoutY="142.0" prefHeight="241.0" prefWidth="420.0" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font></TextArea>
+      <TextField fx:id="journal_title" alignment="CENTER" layoutX="266.0" layoutY="89.0" prefHeight="42.0" prefWidth="169.0" promptText="Title Goes Here...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="cancel_button" layoutX="370.0" layoutY="392.0" mnemonicParsing="false" onAction="#cancelEntry" prefHeight="42.0" prefWidth="80.0" style="-fx-background-color: #D64045; -fx-border-color: none; -fx-background-radius: 7;" styleClass="buttons" text="Cancel">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="save_button" layoutX="266.0" layoutY="392.0" mnemonicParsing="false" onAction="#saveEntry" prefHeight="42.0" prefWidth="80.0" style="-fx-background-color: #23967F; -fx-border-color: none; -fx-background-radius: 7;" styleClass="buttons" text="Save">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Label fx:id="date_field" layoutX="25.0" layoutY="68.0" prefHeight="42.0" prefWidth="136.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ColorPicker fx:id="mood_selector" layoutX="555.0" layoutY="91.0" prefHeight="27.0" prefWidth="117.0" />
+      <Label layoutX="546.0" layoutY="68.0" prefHeight="23.0" prefWidth="136.0" text="Color expression">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

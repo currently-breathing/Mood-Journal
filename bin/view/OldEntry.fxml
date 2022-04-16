@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="main_page" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OldEntryController">
+   <children>
+      <Label prefHeight="53.0" prefWidth="700.0" style="-fx-background-color: #FED766;" text="Journal: Old Entries">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </Label>
+      <ListView fx:id="journal_entry_list" layoutX="11.0" layoutY="110.0" onMouseClicked="#viewOldEntryClicked" prefHeight="341.0" prefWidth="678.0" />
+      <Button fx:id="january_entries" layoutX="11.0" layoutY="71.0" mnemonicParsing="false" onAction="#listJanuaryEntries" prefHeight="39.0" prefWidth="56.5" text="Jan">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="february_entries" layoutX="68.0" layoutY="71.0" mnemonicParsing="false" onAction="#listFebruaryEntries" prefHeight="39.0" prefWidth="56.5" text="Feb">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="march_entries" layoutX="125.0" layoutY="71.0" mnemonicParsing="false" onAction="#listMarchEntries" prefHeight="39.0" prefWidth="56.5" text="Mar">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="april_entries" layoutX="182.0" layoutY="71.0" mnemonicParsing="false" onAction="#listAprilEntries" prefHeight="39.0" prefWidth="56.5" text="Apr">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="may_entries" layoutX="239.0" layoutY="71.0" mnemonicParsing="false" onAction="#listMayEntries" prefHeight="39.0" prefWidth="56.5" text="May">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="december_entries" layoutX="635.0" layoutY="72.0" mnemonicParsing="false" onAction="#listDecemberEntries" prefHeight="39.0" prefWidth="56.5" text="Dec">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="november_entries" layoutX="578.0" layoutY="72.0" mnemonicParsing="false" onAction="#listNovemberEntries" prefHeight="39.0" prefWidth="56.5" text="Nov">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="october_entries" layoutX="521.0" layoutY="72.0" mnemonicParsing="false" onAction="#listOctoberEntries" prefHeight="39.0" prefWidth="56.5" text="Oct">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="september_entries" layoutX="464.0" layoutY="72.0" mnemonicParsing="false" onAction="#listSeptemberEntries" prefHeight="39.0" prefWidth="56.5" text="Sep">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="august_entries" layoutX="407.0" layoutY="72.0" mnemonicParsing="false" onAction="#listAugustEntries" prefHeight="39.0" prefWidth="56.5" text="Aug">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="july_entries" layoutX="350.0" layoutY="71.0" mnemonicParsing="false" onAction="#listJulyEntries" prefHeight="39.0" prefWidth="56.5" text="Jul">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="june_entries" layoutX="296.0" layoutY="71.0" mnemonicParsing="false" onAction="#listJuneEntries" prefHeight="39.0" prefWidth="56.5" text="Jun">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="main_menu" layoutX="571.0" layoutY="7.0" mnemonicParsing="false" onAction="#returnToMainMenu" text="Main Menu" />
+   </children>
+</AnchorPane>

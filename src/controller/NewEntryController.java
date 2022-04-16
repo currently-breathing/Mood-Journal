@@ -3,6 +3,7 @@
  * and when a user writes and saves a new journal entry
  * 
  * @author Lydia Unterreiner (mdm824)
+ * @author Aldo Martinez (rgj655)
  * 
  * UTSA CS 3443 - Group 09 
  * Spring 2022
@@ -69,6 +70,7 @@ public class NewEntryController {
     void cancelEntry(ActionEvent event) throws IOException {
         main_page = FXMLLoader.load(getClass().getResource("../view/MainMenu.fxml"));// pane you are GOING TO
         Scene scene = new Scene(main_page);// pane you are GOING TO show
+		scene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();// pane you are ON
         window.setScene(scene);
         window.show();
@@ -98,6 +100,7 @@ public class NewEntryController {
         main_page = FXMLLoader.load(getClass().getResource("../view/MainMenu.fxml"));// pane you are GOING TO
         Scene scene = new Scene(main_page);// pane you are GOING TO show
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();// pane you are ON
+		scene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());
         window.setScene(scene);
         window.show();
     }

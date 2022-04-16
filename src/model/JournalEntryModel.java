@@ -2,6 +2,7 @@
  * This is controller class which handles the Viewing old journal entries GUI
  * 
  * @author Lydia Unterreiner (mdm824)
+ * @author Aldo Martinez (rgj655)
  * 
  * UTSA CS 3443 - Group 09 
  * Spring 2022

@@ -2,6 +2,7 @@
  * This is controller class which handles the Viewing old journal entries GUI
  * 
  * @author Lydia Unterreiner (mdm824)
+ * @author Aldo Martinez (rgj655)
  * 
  * UTSA CS 3443 - Group 09 
  * Spring 2022
@@ -51,6 +52,7 @@ public class ViewJournalEntryController {
     	main_page = FXMLLoader.load(getClass().getResource("../view/MainMenu.fxml"));// pane you are GOING TO
         Scene scene = new Scene(main_page);// pane you are GOING TO show
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();// pane you are ON
+		scene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());
         window.setScene(scene);
         window.show();
     }
@@ -64,6 +66,7 @@ public class ViewJournalEntryController {
     	main_page = FXMLLoader.load(getClass().getResource("../view/OldEntry.fxml"));// pane you are GOING TO
         Scene scene = new Scene(main_page);// pane you are GOING TO show
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();// pane you are ON
+		scene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());
         window.setScene(scene);
         window.show();
     }
@@ -71,7 +74,9 @@ public class ViewJournalEntryController {
     /**
      * @param title
      */
-    public void setTitle(String title) {
+    public void setTitle(String title, String content) {
+    	System.out.println(title);
     	journal_title.setText(title);
+    	journal_content.setText(content);;
     }
 }

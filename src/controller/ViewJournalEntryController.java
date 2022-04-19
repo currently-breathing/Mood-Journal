@@ -3,24 +3,32 @@
  * 
  * @author Lydia Unterreiner (mdm824)
  * @author Aldo Martinez (rgj655)
- * @author Allison Warren (rdp375)
+ * @author Orlando Jones (aqv663)
+ * 
  * UTSA CS 3443 - Group 09 
  * Spring 2022
  */
 
 package controller;
 
+
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 
 public class ViewJournalEntryController {
@@ -42,6 +50,9 @@ public class ViewJournalEntryController {
 
     @FXML
     private Label date_field;
+    
+    @FXML
+    private Label color_label;
 
     /**
      * @param event
@@ -74,9 +85,18 @@ public class ViewJournalEntryController {
     /**
      * @param title
      */
-    public void setTitle(String title, String content) {
+    public void setTitle(String title, String content, String date, String color_fromfile) {
     	System.out.println(title);
     	journal_title.setText(title);
-    	journal_content.setText(content);;
+    	journal_content.setText(content);
+    	date_field.setText(date);
+    	
+    	Color color = Color.web(color_fromfile);
+    	
+    	
+    	color_label.setBackground(
+                new Background(new BackgroundFill(color , new CornerRadii(3), new Insets(0))));
+    	
+    	
     }
 }

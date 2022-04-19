@@ -3,8 +3,8 @@
  * 
  * @author Lydia Unterreiner (mdm824)
  * @author Aldo Martinez (rgj655)
- * @author Allison Warren (rdp375)
- *
+ * @author Orlando Jones (aqv663)
+ * 
  * UTSA CS 3443 - Group 09 
  * Spring 2022
  */
@@ -47,6 +47,28 @@ public class JournalEntryModel {
 			e.printStackTrace();
 		}
 	}
+	
+	 public static void listOfFiles(File dirPath, ArrayList<String> arrList){ //helper function for implementing the pie graph  
+
+	      File filesList[] = dirPath.listFiles();
+
+	      for(File file : filesList) {
+
+	         if(file.isFile()) {
+	        	 
+	        	 if (!(file.getName().equals(".DS_Store"))) {
+	        		 arrList.add(file.getName());
+	        	 }
+
+	         } else {
+
+	            listOfFiles(file , arrList);
+
+	         }
+
+	      }
+
+	   }
 
 }
 

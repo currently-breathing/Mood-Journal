@@ -5,8 +5,8 @@
  * 
  * @author Lydia Unterreiner (mdm824)
  * @author Aldo Martinez (rgj655)
- * @author Allison Warren (rdp375)
- *
+ * @author Orlando Jones (aqv663)
+ * 
  * UTSA CS 3443 - Group 09 
  * Spring 2022
  */
@@ -361,12 +361,19 @@ public class OldEntryController {
     	System.out.println(folderLookUp);
     	File folder = new File(folderLookUp);
     	String text = "";
+    	
+    	
+    	String color = "";
+    	
+    	
+    	
     	// look up entry selected to send to controller to view entry
     	for (File file : folder.listFiles()) {
     		String[] entry = file.getName().split("_");
     		String result = entry[0];
     		if (date.equals(result)) {
     			  title=entry[1];
+    			  color=entry[2].substring(0,8);
 			      Scanner myReader = new Scanner(file);
 			      while (myReader.hasNextLine()) {
 			        String data = myReader.nextLine();
@@ -375,7 +382,10 @@ public class OldEntryController {
 			      myReader.close();
 	    		}
     	}
-    	controller.setTitle(title, text);
+    	
+    	System.out.println(color);
+    	
+    	controller.setTitle(title, text, date, color);
         Scene scene = new Scene(main_page);// pane you are GOING TO show
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();// pane you are ON
 		scene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());

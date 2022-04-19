@@ -4,15 +4,18 @@
  * 
  * @author Lydia Unterreiner (mdm824)
  * @author Aldo Martinez (rgj655)
- * @author Allison Warren (rdp375)
- *
+ * @author Orlando Jones (aqv663)
+ * 
  * UTSA CS 3443 - Group 09 
  * Spring 2022
  */
 
 package controller;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -26,6 +29,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import model.JournalEntryModel;
 
 public class MainMenuController {
 	//class variables 
@@ -45,6 +49,13 @@ public class MainMenuController {
     private PieChart journal_mood_chart;
     //ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
     
+    
+    
+    
+    
+    
+    
+    
     /** 
      * @throws Exception
      */
@@ -54,11 +65,29 @@ public class MainMenuController {
     		year_drop_down.getItems().add(""+i);
     	}
     	
+    	
+    	
+    	
+    	//go through journalEntries and each month and count each unique color.
+    	//TBD
+    	File file = new File("journalEntries/");
+    	ArrayList<String> arr_files = new ArrayList<String>();
+    	JournalEntryModel.listOfFiles(file, arr_files);
+    	System.out.println(arr_files.size());
+    	int files_total = arr_files.size();
+    	
+    	
+    	
+    	
+    	
     	//example pie chart
     	ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(
                 new PieChart.Data("Executed", 60),
                 new PieChart.Data("Passed", 25),
-                new PieChart.Data("Fails", 15));
+                new PieChart.Data("Fails", 15)
+                
+               );
+    
 
     	journal_mood_chart.setData(pieChartData);
     }

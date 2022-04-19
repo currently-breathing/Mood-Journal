@@ -1,8 +1,11 @@
 # Mood-Journal
 Group Name: Clever Compilation
+
 Group Members: Allison Warren, Orlando Jones, Aldo Martinez, Lydia Unterreiner
+
 App Descritption: This app allows users to record journal entries, view past enteries, and display an overiew of all enteries dating years back.
 No login info needed
+
 Versions required: Eclipse jdk 1.8, JavaFx, and SceneBuilder
 
 Instructions:

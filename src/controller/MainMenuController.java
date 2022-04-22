@@ -15,6 +15,7 @@ package controller;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javafx.collections.FXCollections;
@@ -28,6 +29,7 @@ import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import model.JournalEntryModel;
 
@@ -41,55 +43,33 @@ public class MainMenuController {
 
     @FXML
     private Button new_entry_button;
-    
-    @FXML
-    private ChoiceBox<String> year_drop_down;
 
     @FXML
     private PieChart journal_mood_chart;
-    //ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
-    
-    
-    
-    
-    
-    
-    
+    ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
     
     /** 
      * @throws Exception
      */
     @FXML
     public void initialize() throws Exception {
-    	for (int i = 2013; i < 2022; i++) {
-    		year_drop_down.getItems().add(""+i);
-    	}
-    	
-    	
-    	
-    	
-    	//go through journalEntries and each month and count each unique color.
-    	//TBD
-    	File file = new File("journalEntries/");
-    	ArrayList<String> arr_files = new ArrayList<String>();
-    	JournalEntryModel.listOfFiles(file, arr_files);
-    	System.out.println(arr_files.size());
-    	int files_total = arr_files.size();
-    	
-    	
-    	
-    	
-    	
-    	//example pie chart
-    	ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(
-                new PieChart.Data("Executed", 60),
-                new PieChart.Data("Passed", 25),
-                new PieChart.Data("Fails", 15)
-                
-               );
-    
 
-    	journal_mood_chart.setData(pieChartData);
+    	//read in color moods for pie chart.
+    	File file = new File("journalEntries/color_mood.txt");
+    	HashMap<String, Integer> color_map = new HashMap<>();
+    	
+    	float num_moods = JournalEntryModel.mapOfColors(file, color_map);	
+    	for (String name: color_map.keySet()) {
+    		
+    		float value = Integer.parseInt(color_map.get(name).toString());
+    		value = (value / num_moods) * 100;
+    		
+    		PieChart.Data s1 = new PieChart.Data(name.toString(), value);
+        	journal_mood_chart.getData().add(s1);
+ 
+    	}
+    	journal_mood_chart.setLabelsVisible(false);
+    	journal_mood_chart.setLegendVisible(false);
     }
     
     /**

@@ -95,8 +95,10 @@ public class NewEntryController {
     	String date = date_field.getText();
     	Color mood = mood_selector.getValue();
     	
-    	// Save entry and return to main Page
+    	// Save entry
     	JournalEntryModel.addJournalEntry(title, description, date, mood.toString());
+    	
+    	// Return to main Page
         main_page = FXMLLoader.load(getClass().getResource("../view/MainMenu.fxml"));// pane you are GOING TO
         Scene scene = new Scene(main_page);// pane you are GOING TO show
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();// pane you are ON
